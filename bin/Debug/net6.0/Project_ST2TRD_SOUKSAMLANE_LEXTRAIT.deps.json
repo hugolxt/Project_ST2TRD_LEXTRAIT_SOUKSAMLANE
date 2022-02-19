@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Project_ST2TRD_SOUKSAMLANE_LEXTRAIT/1.0.0": {
+        "runtime": {
+          "Project_ST2TRD_SOUKSAMLANE_LEXTRAIT.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Project_ST2TRD_SOUKSAMLANE_LEXTRAIT/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

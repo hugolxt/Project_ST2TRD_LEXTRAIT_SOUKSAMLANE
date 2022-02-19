@@ -6,7 +6,14 @@ namespace Project_ST2TRD_SOUKSAMLANE_LEXTRAIT
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Process start...");
+            
+            StockList stockList = new StockList(); // Global objetc
+            String data = stockList.getdata(); // data retrieved from url (string)
+            Console.WriteLine(data);
+            stockList.deserializeStock(data); // match the json to the object created
+
+            Console.WriteLine("Process ended...");
         }
     }
 }

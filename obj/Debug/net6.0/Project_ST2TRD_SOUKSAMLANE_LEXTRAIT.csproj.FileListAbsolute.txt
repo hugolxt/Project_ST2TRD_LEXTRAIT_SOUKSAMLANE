@@ -1,0 +1,15 @@
+/Users/hugolextrait/Desktop/souk dossier/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT/bin/Debug/net6.0/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT
+/Users/hugolextrait/Desktop/souk dossier/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT/bin/Debug/net6.0/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT.deps.json
+/Users/hugolextrait/Desktop/souk dossier/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT/bin/Debug/net6.0/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT.runtimeconfig.json
+/Users/hugolextrait/Desktop/souk dossier/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT/bin/Debug/net6.0/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT.dll
+/Users/hugolextrait/Desktop/souk dossier/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT/bin/Debug/net6.0/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT.pdb
+/Users/hugolextrait/Desktop/souk dossier/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT/obj/Debug/net6.0/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT.csproj.AssemblyReference.cache
+/Users/hugolextrait/Desktop/souk dossier/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT/obj/Debug/net6.0/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT.GeneratedMSBuildEditorConfig.editorconfig
+/Users/hugolextrait/Desktop/souk dossier/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT/obj/Debug/net6.0/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT.AssemblyInfoInputs.cache
+/Users/hugolextrait/Desktop/souk dossier/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT/obj/Debug/net6.0/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT.AssemblyInfo.cs
+/Users/hugolextrait/Desktop/souk dossier/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT/obj/Debug/net6.0/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT.csproj.CoreCompileInputs.cache
+/Users/hugolextrait/Desktop/souk dossier/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT/obj/Debug/net6.0/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT.dll
+/Users/hugolextrait/Desktop/souk dossier/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT/obj/Debug/net6.0/refint/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT.dll
+/Users/hugolextrait/Desktop/souk dossier/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT/obj/Debug/net6.0/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT.pdb
+/Users/hugolextrait/Desktop/souk dossier/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT/obj/Debug/net6.0/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT.genruntimeconfig.cache
+/Users/hugolextrait/Desktop/souk dossier/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT/obj/Debug/net6.0/ref/Project_ST2TRD_SOUKSAMLANE_LEXTRAIT.dll
