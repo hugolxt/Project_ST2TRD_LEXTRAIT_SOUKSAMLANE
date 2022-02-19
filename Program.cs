@@ -8,11 +8,14 @@ namespace Project_ST2TRD_SOUKSAMLANE_LEXTRAIT
         {
             Console.WriteLine("Process start...");
             
-            StockList stockList = new StockList(); // Global objetc
-            String data = stockList.getdata(); // data retrieved from url (string)
-            Console.WriteLine(data);
-            stockList.deserializeStock(data); // match the json to the object created
-
+            GetDataUrl data = new GetDataUrl(); // Global objetc
+            
+            String json = data.getdata(); // data retrieved from url (string)
+            
+            var stock = Stock.FromJson(json);
+            
+            stock.Select(i => $"{i.Key} : [{i.Value.Eur}€ , {i.Value.Usd}$]").ToList().ForEach(Console.WriteLine);
+            
             Console.WriteLine("Process ended...");
         }
     }
