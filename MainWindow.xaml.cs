@@ -14,6 +14,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MaterialDesignThemes.Wpf;
 using System.Diagnostics;
+using UserInterface.Pages;
+using LiveCharts;
+using LiveCharts.Wpf;
 
 namespace UserInterface
 {
@@ -25,42 +28,20 @@ namespace UserInterface
         public MainWindow()
         {
             InitializeComponent();
-        }
-        public bool IsDarktheme { get; set; }
-        private readonly PaletteHelper paletteHelper = new PaletteHelper();
-        private void toggleTheme(object sender, RoutedEventArgs e)
-        {
-            ITheme theme = paletteHelper.GetTheme();
-            if(IsDarktheme == true)
-            {
-                Trace.WriteLine("LIGHT");
-                IsDarktheme = false;
-                theme.SetBaseTheme(Theme.Light);
-            }
-            else
-            {
-                Trace.WriteLine("DARK");
-                IsDarktheme = true;
-                theme.SetBaseTheme(Theme.Dark);
-            }
-            paletteHelper.SetTheme(theme);
+            Page landingpage = new Landingpage();
+            myframe.NavigationService.Navigate(landingpage);
         }
 
-        private void exitApp(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown(); 
-        }
 
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
         {
             base.OnMouseLeftButtonDown(e);
             DragMove();
         }
-        private void navigate(object sender, RoutedEventArgs e)
+
+
+        private void Frame_Navigated(object sender, NavigationEventArgs e)
         {
-            Trace.WriteLine("Navigate");
-            //NavigationService nav = NavigationService.GetNavigationService(this);
-            //nav.Navigate(new Uri("Page1.xaml", UriKind.RelativeOrAbsolute));
 
         }
     }
