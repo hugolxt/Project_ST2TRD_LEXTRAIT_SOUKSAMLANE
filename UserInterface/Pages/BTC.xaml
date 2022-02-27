@@ -1,0 +1,149 @@
+﻿<Page x:Class="UserInterface.Pages.BTC"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:UserInterface.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BTC" Height="720" Width="1280"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      Background="{x:Null}">
+
+    <materialDesign:Card UniformCornerRadius="15" Background="{DynamicResource MaterialDesignPaper}" Margin="25" materialDesign:ShadowAssist.ShadowDepth="Depth4">
+        <materialDesign:DialogHost CloseOnClickAway="True" x:Name="DialogHost">
+            <StackPanel>
+                <DockPanel Margin="30 20 30 0">
+                    <Button Width="70"  HorizontalAlignment="Left" Click="backHomePage" Content="Back"></Button>
+                    <Image  Margin="-30 0 0 0" Source="/Pages/Atinium.png" Width="200"></Image>
+                </DockPanel>
+                
+                <Grid Margin="40 10 40 0" Width="1280" HorizontalAlignment="Center" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="950" />
+                        <ColumnDefinition Width="280" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    
+                    <StackPanel Height="530" Width="880" Margin="0 0"  Grid.Column="0" HorizontalAlignment="Left">
+                        <TextBlock Margin="40 10 0 0" Text="Bitcoin Closing prices in US$" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" FontFamily="Roboto"></TextBlock>
+                        <WpfPlot Name="WpfPlot1" Height="500" Width="840" HorizontalAlignment="Left" Margin="40 0 0 0"/>
+                    </StackPanel>
+
+                    <StackPanel Height="500" Width="280" Margin="0 0" Grid.Column="1" HorizontalAlignment="Right">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20" />
+                                <RowDefinition Height="70" />
+                                <RowDefinition Height="180" />
+                                <RowDefinition Height="20" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="Additional asset" HorizontalAlignment="Center" FontWeight="Bold" FontSize="18" Margin="0 0 0 0"></TextBlock>
+                            <StackPanel Grid.Row="1" Width="400">
+                                <DockPanel Margin="10 10 0 0">
+                                    <ToggleButton Cursor="Hand" x:Name="toggleBtc" HorizontalAlignment="Left" Checked="showBtc" Unchecked="unShowBtc"/>
+                                    <TextBlock Text="Bitcoin" Foreground="Black" Margin="20 5"></TextBlock>
+                                </DockPanel>
+                                <DockPanel Margin="10 10 0 0">
+                                    <ToggleButton Cursor="Hand" x:Name="toggleBnb" HorizontalAlignment="Left" Checked="showBnb" Unchecked="unShowBnb" />
+                                    <TextBlock Text="Binance Coin" Foreground="Black" Margin="20 5"></TextBlock>
+                                </DockPanel>
+                            </StackPanel>
+                            <StackPanel  Grid.Row="2" Height="200" VerticalAlignment="Top" Margin="0 15 0 0">
+                                <TextBlock Text="Correlation analysis" HorizontalAlignment="Center" FontWeight="Bold" FontSize="18" Margin="0 0 0 0"></TextBlock>
+                                <DockPanel HorizontalAlignment="Center" Margin="0 10 0 0">
+                                    <TextBlock Text="Period is " VerticalAlignment="Center"/>
+                                    <TextBox  PreviewTextInput="PreviewTextInput" Text="30" Width="40" TextAlignment="Center" Name="corrPeriod"/>
+                                    <TextBlock Text="Days" VerticalAlignment="Center"/>
+                                </DockPanel>
+                                <Grid Margin="0 5 0 0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="20" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    
+                                    <TextBlock Grid.Column="0" Text="Bitcoin" Width="70" FontSize="15" VerticalAlignment="Center"></TextBlock>
+                                    <TextBlock Grid.Column="1" Text="vs" VerticalAlignment="Center"></TextBlock>
+                                    <ComboBox  Name="corrComboBox" Grid.Column="2" VerticalAlignment="Bottom" FontSize="15" Margin="15 0 0 0" SelectionChanged="corrSelectionChanged" >
+                                        <ComboBoxItem IsSelected="True" Name="btc">Bitcoin (btc)</ComboBoxItem>
+                                        <ComboBoxItem Name="eth">Ethereum (eth)</ComboBoxItem>
+                                        <ComboBoxItem Name="bnb">Binance Coin (bnb)</ComboBoxItem>
+                                        <ComboBoxItem Name="xrp">Ripple (xrp)</ComboBoxItem>
+                                        <ComboBoxItem Name="ada">Cardano (ada)</ComboBoxItem>
+                                        <ComboBoxItem Name="sol">Solana (sol)</ComboBoxItem>
+                                        <ComboBoxItem Name="avax">Avalanche (avax)</ComboBoxItem>
+                                        <ComboBoxItem Name="dot">Polkadot (dot)</ComboBoxItem>
+                                        <ComboBoxItem Name="matic">Polygon (matic)</ComboBoxItem>
+                                        <ComboBoxItem Name="cro">Crypto.com (cro)</ComboBoxItem>
+                                    </ComboBox>
+                                </Grid>
+                                <materialDesign:Card UniformCornerRadius="20" Background="White" Margin=" 0 10 0 0" Width="85" Height="60" materialDesign:ShadowAssist.ShadowDepth="Depth2" >
+                                    <TextBlock Name="corr" Text="Not set" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16"></TextBlock>
+                                </materialDesign:Card>
+                            </StackPanel >
+                            
+
+
+                            <StackPanel  Grid.Row="4" Height="210" VerticalAlignment="Bottom">
+                                <TextBlock Text="Daily Market Capitalization" HorizontalAlignment="Center" FontWeight="Bold" FontSize="18" Margin="0 0 0 5"></TextBlock>
+                                <Grid Margin="0 10 0 0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.4*" />
+                                        <ColumnDefinition Width="0.6*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    
+                                    <TextBlock  Grid.Row="0" Grid.Column="0" Name="marketCapD0" Text="Not Found" TextAlignment="Right"></TextBlock>
+                                    <TextBlock  Grid.Row="0" Grid.Column="1" Name="marketCapV0" Text="Not Found" TextAlignment="Right" Margin="0 0 50 0"></TextBlock>
+                                    <TextBlock  Grid.Row="1" Grid.Column="0" Name="marketCapD1" Text="Not Found" TextAlignment="Right"></TextBlock>
+                                    <TextBlock  Grid.Row="1" Grid.Column="1" Name="marketCapV1" Text="Not Found" TextAlignment="Right" Margin="0 0 50 0"></TextBlock>
+                                    <TextBlock  Grid.Row="2" Grid.Column="0" Name="marketCapD2" Text="Not Found" TextAlignment="Right"></TextBlock>
+                                    <TextBlock  Grid.Row="2" Grid.Column="1" Name="marketCapV2" Text="Not Found" TextAlignment="Right" Margin="0 0 50 0"></TextBlock>
+                                    <TextBlock  Grid.Row="3" Grid.Column="0" Name="marketCapD3" Text="Not Found" TextAlignment="Right"></TextBlock>
+                                    <TextBlock  Grid.Row="3" Grid.Column="1" Name="marketCapV3" Text="Not Found" TextAlignment="Right" Margin="0 0 50 0"></TextBlock>
+                                    <TextBlock  Grid.Row="4" Grid.Column="0" Name="marketCapD4" Text="Not Found" TextAlignment="Right"></TextBlock>
+                                    <TextBlock  Grid.Row="4" Grid.Column="1" Name="marketCapV4" Text="Not Found" TextAlignment="Right" Margin="0 0 50 0"></TextBlock>
+                                    <TextBlock  Grid.Row="5" Grid.Column="0" Name="marketCapD5" Text="Not Found" TextAlignment="Right"></TextBlock>
+                                    <TextBlock  Grid.Row="5" Grid.Column="1" Name="marketCapV5" Text="Not Found" TextAlignment="Right" Margin="0 0 50 0"></TextBlock>
+                                    <TextBlock  Grid.Row="6" Grid.Column="0" Name="marketCapD6" Text="Not Found" TextAlignment="Right"></TextBlock>
+                                    <TextBlock  Grid.Row="6" Grid.Column="1" Name="marketCapV6" Text="Not Found" TextAlignment="Right" Margin="0 0 50 0"></TextBlock>
+                                    <TextBlock  Grid.Row="7" Grid.Column="0" Name="marketCapD7" Text="Not Found" TextAlignment="Right"></TextBlock>
+                                    <TextBlock  Grid.Row="7" Grid.Column="1" Name="marketCapV7" Text="Not Found" TextAlignment="Right" Margin="0 0 50 0"></TextBlock>
+                                    <TextBlock  Grid.Row="8" Grid.Column="0" Name="marketCapD8" Text="Not Found" TextAlignment="Right"></TextBlock>
+                                    <TextBlock  Grid.Row="8" Grid.Column="1" Name="marketCapV8" Text="Not Found" TextAlignment="Right" Margin="0 0 50 0"></TextBlock>
+                                    <TextBlock  Grid.Row="9" Grid.Column="0" Name="marketCapD9" Text="Not Found" TextAlignment="Right"></TextBlock>
+                                    <TextBlock  Grid.Row="9" Grid.Column="1" Name="marketCapV9" Text="Not Found" TextAlignment="Right" Margin="0 0 50 0"></TextBlock>
+                                </Grid>
+                                
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                    <!-- <WpfPlot Name="WpfPlot1" Width="700" Height="500" HorizontalAlignment="Left"/> -->
+                </Grid>
+               
+            </StackPanel>
+            
+        </materialDesign:DialogHost>
+        
+    </materialDesign:Card>
+</Page>

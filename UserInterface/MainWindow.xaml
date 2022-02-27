@@ -1,0 +1,20 @@
+﻿<Window x:Class="UserInterface.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:UserInterface"
+        mc:Ignorable="d"
+        Title="Cypto Analist" Height="720" Width="1280"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{x:Null}"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        >
+    <Frame x:Name="myframe" Content="Frame" Navigated="Frame_Navigated" HorizontalAlignment="Stretch" Height="Auto" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" NavigationUIVisibility="Hidden"/>
+
+
+</Window>
