@@ -37,4 +37,5 @@ The list below represents an exhaustive list of the different functionalities th
 - Move graph and zoom on specific period
 - Correlation analysis to another asset on a user choosen period
 - Daily market capitalization
-- Navigate easily between application's pages 
+- Navigate easily between application's pages
+- Exit the application 
