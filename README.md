@@ -2,7 +2,7 @@
  
  
 ## Authors 
-**LEXTRAIT** Hugo  
+**LEXTRAIT** Hugo  @hugolxt
 **SOUKSAMLANE** Hugo
 
 ## Abstract
