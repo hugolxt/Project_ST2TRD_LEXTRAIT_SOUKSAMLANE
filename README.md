@@ -2,14 +2,12 @@
  
  
 ## Authors 
-**Date of Delivery :** 02/29/2022
-
-1. **LEXTRAIT** Hugo
-2. **SOUKSAMLANE** Hugo
+**LEXTRAIT** Hugo  
+**SOUKSAMLANE** Hugo
 
 ## Abstract
 
-**Altinium allows the user to analyse unavoidable informations about the top 10 cryptocurencies in 2022.** The application allows you to navigate between different pages of information related to a crypto currency. It allows you to analyze the price graphs and some information such as its trend over the past days or the correlation to another asset
+**Altinium allows the user to analyse unavoidable informations about the top 10 cryptocurencies in 2022.** The application allows you to navigate between different pages of information related to a crypto currency. It allows you to analyze the price graphs and some information such as its trend over the past days
 
 ## Application's purpose
 
@@ -24,20 +22,37 @@ Then, thanks to the request, we receive a json file which contains all the wante
 By using deserialization process, we converts the .json file into Crypto objects which has the exact same structure.
 Finally, with these internal C# Crypto object, we were able to manipulate it by creating dictionaries, lists, arrays, etc..
 
-## Which function
-
 ## Features availables
-
 The list below represents an exhaustive list of the different functionalities that the user can do within the application.
 
-- [x] View top 10 cryptocurrencies by market Capitalization
-- [x] Analyze trend 3 periods availables {24 hours, 14 days, 30 days}
-- [x] Total volume in dollar echanged last 6 months
-- [x] Get specific informatiosn on a crytocurrency
-- [x] Scatter graph of the closing price of the choosen asset
-- [x] Add optionnal asset's graph to compare to the chosen cryptocurrency
-- [x] Move graph and zoom on specific period
-- [x] Correlation analysis to another asset on a user choosen period
-- [x] Daily market capitalization
-- [x] Navigate easily between application's pages
-- [x] Exit the application 
+- View top 10 cryptocurrencies by market Capitalization
+- Analyze trend 3 periods availables {24 hours, 14 days, 30 days}
+- Total volume in dollar echanged last 6 months
+- Get specific informatiosn on a crytocurrency
+- Scatter graph of the closing price of the choosen asset
+- Add optionnal asset's graph to compare to the chosen cryptocurrency
+- Move graph and zoom on specific period
+- Correlation analysis to another asset on a user choosen period
+- Daily market capitalization
+- Navigate easily between application's pages 
+
+## Functions 
+- DatetTime datetimeConvertor(string date) : takes a string format date and returns the same date with a datetime format
+- string growthCalculator(Crypto crypto_input, int number_days) : initializes a dictionary containg the closing prices of the Cryptocurrency given in parameter. On the other hand, following the second parameter "number_days", it creates today's datetime and an other datetime which corresponds to today's date minus the number_days. Finally, it calculates the evolution of the cryptocurrency's closing price from this past datetime and today, and return "Bearish", "Neutral" or "Bullish" depending on the result's sign.
+- string FormatDoubleValues(double valueLength, double dictValue) : this function basically converts an input double value into a string value. In addition, it changes the string format depending on the number of thousands (1K for 1 000, 1M for 1 000 000, 1B for 1 000 000 000)
+- string totalVolumeCalculator (Crypto crypto_ticker) : calcultes a specific cryptocurrency's total volume in a given period of time.
+- IDictionary <string,double> dictionaryGenerator (Crypto crypto_ticker, string column, int number_datas) : generates and returns a dictionary containing specific cryptocurrency column data (Open, Close, High, Low, Volume) as Value, and the corresponding date as KeyValye. The number of retrieved data is set by the number_datas parameter. In addition, this function has been overloaded in order to sometimes return a <string,string> dictionary, a <Datetime,double> one or even a <string, double> one.
+- double [] dictValuesToArray(IDictionary<string,double> closingValues) : creates an array which contains all the Values of a given dictionary.
+- string correlationCalculator (Crypto firstCrypto, Crypto secondCrypto, int n) : performs and returns the correlation coefficient between two cryptocurrencies. It firstly calls the dictionaryGenerator twice in order to create two dictionary containing each cryptocurrency closing prices. Then, it also calls dictValuesToArray twice in order to create two arrays containing the two dictionaries values (and get rid of the date in the KeyValues). Finally, with these two parallel arrays, we execute the whole correlation calculation.
+- exitApp(object sender, RoutedEventArgs e) : quits the application
+- void toggleTheme(object sender, RoutedEventArgs e) : toggle theme between dark and light
+- void goToXXX(object sender, RoutedEventArgs e) : initializes a page XX and switch the current page to the new generated page
+- updateTrendElement(Card cardTrend, TextBlock textBlockTrend, string trend) : get the color corresponding to the trend
+- setData() : major function that initialize for each cryptocurrency when the landing page loads and call functions to updates values.
+- backHomePage(object sender, RoutedEventArgs e) : navigates back to the landingPage
+- void addToScatter(Crypto asset, ScottPlot.WpfPlot plot, System.Drawing.Color color) : adds a scatter of a specific crypto's closing price to targeted Scottplot graph
+- void refreshGraph(Crypto asset1, Crypto asset2 = null, Crypto asset3 = null, Crypto asset4 = null) : Add multiple scatter to graph with specific colors
+- showXXX(object sender, RoutedEventArgs e) : turns to true variable to show a specific scatter graph. Allow us to enable a graph or not
+- void setmarketCap() : get and set the Daily market cap for a specific asset
+- void corrSelectionChanged(object sender, SelectionChangedEventArgs e) : Determines the correlation between 2 assets according to the user selection.
+- void PreviewTextInput(object sender, TextCompositionEventArgs e) : Allow us to manage the user input on a TextBox
