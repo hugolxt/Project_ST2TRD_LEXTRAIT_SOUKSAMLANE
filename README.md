@@ -2,8 +2,8 @@
  
  
 ## Authors 
-**LEXTRAIT** Hugo   
-**SOUKSAMLANE** Hugo
+1. **LEXTRAIT** Hugo
+2. **SOUKSAMLANE** Hugo
 
 ## Abstract
 
