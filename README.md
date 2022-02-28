@@ -37,6 +37,9 @@ The list below represents an exhaustive list of the different functionalities th
 - Navigate easily between application's pages 
 
 ## Functions 
+
+### Back end  
+
 - **DatetTime datetimeConvertor(string date)** : takes a string format date and returns the same date with a datetime format  
 
 - **string growthCalculator(Crypto crypto_input, int number_days)** : initializes a dictionary containg the closing prices of the Cryptocurrency given in parameter. On the other hand, following the second parameter "number_days", it creates today's datetime and an other datetime which corresponds to today's date minus the number_days. Finally, it calculates the evolution of the cryptocurrency's closing price from this past datetime and today, and return "Bearish", "Neutral" or "Bullish" depending on the result's sign.  
@@ -51,6 +54,7 @@ The list below represents an exhaustive list of the different functionalities th
 
 - **string correlationCalculator (Crypto firstCrypto, Crypto secondCrypto, int n)** : performs and returns the correlation coefficient between two cryptocurrencies. It firstly calls the dictionaryGenerator twice in order to create two dictionary containing each cryptocurrency closing prices. Then, it also calls dictValuesToArray twice in order to create two arrays containing the two dictionaries values (and get rid of the date in the KeyValues). Finally, with these two parallel arrays, we execute the whole correlation calculation.     
 
+### front end 
 - **void exitApp(object sender, RoutedEventArgs e)** : quits the application  
 
 - **void toggleTheme(object sender, RoutedEventArgs e)** : toggle theme between dark and light  
