@@ -49,12 +49,8 @@
                             <TextBlock Text="Additional asset" HorizontalAlignment="Center" FontWeight="Bold" FontSize="18" Margin="0 0 0 0"></TextBlock>
                             <StackPanel Grid.Row="1" Width="400">
                                 <DockPanel Margin="10 10 0 0">
-                                    <ToggleButton Cursor="Hand" x:Name="toggleBtc" HorizontalAlignment="Left" Checked="showBtc" Unchecked="unShowBtc"/>
-                                    <TextBlock Text="Bitcoin" Foreground="Black" Margin="20 5"></TextBlock>
-                                </DockPanel>
-                                <DockPanel Margin="10 10 0 0">
-                                    <ToggleButton Cursor="Hand" x:Name="toggleBnb" HorizontalAlignment="Left" Checked="showBnb" Unchecked="unShowBnb" />
-                                    <TextBlock Text="Binance Coin" Foreground="Black" Margin="20 5"></TextBlock>
+                                    <ToggleButton Cursor="Hand" x:Name="toggleBtc" HorizontalAlignment="Left" Checked="showEth" Unchecked="unShowEth" />
+                                    <TextBlock Text="Ethereum" Foreground="Black" Margin="20 5"></TextBlock>
                                 </DockPanel>
                             </StackPanel>
                             <StackPanel  Grid.Row="2" Height="200" VerticalAlignment="Top" Margin="0 15 0 0">

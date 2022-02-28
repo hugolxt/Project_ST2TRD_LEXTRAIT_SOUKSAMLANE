@@ -1,20 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using LiveCharts;
-using LiveCharts.Wpf;
 using System.Text.RegularExpressions;
 
 namespace UserInterface.Pages
@@ -43,8 +32,8 @@ namespace UserInterface.Pages
 
 
 
-        Boolean displayBTC { get; set; }
-        Boolean displayBNB { get; set; }
+        Boolean displayAsset1 { get; set; }
+        Boolean displayAsset2 { get; set; }
         Boolean init { get; set; }
 
         public DOT()
@@ -99,11 +88,11 @@ namespace UserInterface.Pages
             WpfPlot1.Plot.Clear();
             addToScatter(asset1, WpfPlot1, System.Drawing.Color.Purple);
 
-            if (displayBTC) // btc
+            if (displayAsset1) // btc
             {
                 addToScatter(asset2, WpfPlot1, System.Drawing.Color.Blue);
             }
-            if (displayBNB) // bnb
+            if (displayAsset2) // bnb
             {
                 addToScatter(asset3, WpfPlot1, System.Drawing.Color.BlueViolet);
             }
@@ -118,26 +107,26 @@ namespace UserInterface.Pages
 
         private void showBnb(object sender, RoutedEventArgs e)
         {
-            displayBNB = true;
+            displayAsset2 = true;
             refreshGraph(assetETH, assetBTC, assetBNB);
 
         }
 
         private void unShowBnb(object sender, RoutedEventArgs e)
         {
-            displayBNB = false;
+            displayAsset2 = false;
             refreshGraph(assetETH, assetBTC, assetBNB);
         }
 
         private void showBtc(object sender, RoutedEventArgs e)
         {
-            displayBTC = true;
+            displayAsset1 = true;
             refreshGraph(assetETH, assetBTC, assetBNB);
         }
 
         private void unShowBtc(object sender, RoutedEventArgs e)
         {
-            displayBTC = false;
+            displayAsset1 = false;
             refreshGraph(assetETH, assetBTC, assetBNB);
         }
 

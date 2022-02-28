@@ -92,9 +92,7 @@ namespace UserInterface
             DateTime beginning_date = today.AddDays(-number_days);
 
             string strToday = today.ToString("dd/MM/yyyy");
-            string strBeginningDate = beginning_date.ToString("dd/MM/yyyy");    
-            Console.WriteLine(strToday);
-            Console.WriteLine(strBeginningDate);
+            string strBeginningDate = beginning_date.ToString("dd/MM/yyyy");
             
             IDictionary<string, double> crypto = dictionnaryGenerator(crypto_input, "Close");
 
