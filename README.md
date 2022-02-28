@@ -25,3 +25,13 @@ Finally, with these internal C# Crypto object, we were able to manipulate it by 
 ## Which function
 
 ## Features availables
+- View top 10 cryptocurrencies by market Capitalization
+- Analyze trend 3 periods availables {24 hours, 14 days, 30 days}
+- Total volume in dollar echanged last 6 months
+- Get specific informatiosn on a crytocurrency
+- Scatter graph of the closing price of the choosen asset
+- Add optionnal asset's graph to compare to the chosen cryptocurrency
+- Move graph and zoom on specific period
+- Correlation analysis to another asset on a user choosen period
+- Daily market capitalization
+- Navigate easily between application's pages 
