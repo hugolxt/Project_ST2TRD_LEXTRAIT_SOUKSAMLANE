@@ -11,9 +11,9 @@
 
 ## Application's purpose
 
-Altinium is a C#-coded WPF application which displays datas linked to the 10-most important current cryptocurrencies.
+Altinium is a C#-coded with WPF graphical interface application which displays datas linked to the 10-most important current cryptocurrencies.
 Our application calculates 365-days total volume, 1/7/30 days prices' trend, correlation between 2 different cryptocurrencies during desired time period, market capitalization, etc...
-We designed the WPF application in order to display more intuitive and fancier information such as cryptocurrencies closing prices' graphs evolution through time, green/red bearish/bullish button depending on each evolution, interactive correlation calculator feature, etc...
+We designed the WPF application the more userfriendly possible in order to display more intuitive and fancier information such as cryptocurrencies closing prices' graphs evolution through time, green/red bearish/bullish button depending on each evolution, interactive correlation calculator feature, etc...
 
 ## How does it work?
 It retrieves some datas linked to the cryptocurrency world by using CryptoCompare API and its requests.
