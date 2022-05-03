@@ -7,7 +7,7 @@
 
 ## Abstract
 
-**Altinium allows the user to analyse unavoidable informations about the top 10 cryptocurencies in 2022.** The application allows you to navigate between different pages of information related to a crypto currency. It allows you to analyze the price graphs and some information such as its trend over the past days
+**Altinium allows the user to analyse unavoidable informations about the top 10 cryptocurencies in 2022.** The application allows you to navigate between different pages of information related to a crypto currency. It allows you to analyze the price graphs and some information such as its trend over the past days 
 
 
 ## Screen preview
